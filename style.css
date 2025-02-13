@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffccd5;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.container, .message-container {
+    position: relative;
+}
+
+h1 {
+    color: #d6336c;
+    font-size: 2rem;
+}
+
+p {
+    color: #6a0572;
+    font-size: 1.2rem;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 50px;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.1) rotate(-45deg); }
+    100% { transform: scale(1) rotate(-45deg); }
+}
+
+/* Styling for message page */
+.message-container {
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d6336c;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #a32050;
+}

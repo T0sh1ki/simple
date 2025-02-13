@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine? 🫦</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Be My Valentine 🫦</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffccd5;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        h1 {
+            color: #d6336c;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #6a0572;
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        /* Censor effect */
+        .censored {
+            background-color: black;
+            color: black;
+            padding: 2px 8px;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        /* Reveal text when hovering */
+        .censored:hover {
+            color: white;
+            background-color: transparent;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="message-container">
-        <h1>Be my Valentine 🫦 or wait 6 months!</h1>
-        <p>💘 Choose?? 💘</p>
-        <a href="index.html" class="back-button">Go Back</a>
+    <div>
+        <h1>Be my valentine 🫦</h1>
+        <p>Or <span class="censored">wait 6 months</span>...</p>
     </div>
 
 </body>
